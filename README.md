@@ -8,6 +8,7 @@
 This is a simple challenge to test your skills on building APIs.
 
 # END_POINTS
+## https://placesz.herokuapp.com/
 Create a simple API to manage places. This API should allow to:
 <br>
 - Create a place: POST/places/new
