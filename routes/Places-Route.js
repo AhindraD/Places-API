@@ -31,20 +31,27 @@ router.get('/all', async (request, response) => {
 //CREATE a new PLACE
 router.post('/new', upload.single('image'), async (request, response) => {
     const { name, slug, city, state } = request.body;
+    let imageUrl = null;
+    // try {
+    //     let uploadedFile = request.file.filename;
+    //     uploadedFile = 'uploads/' + uploadedFile;
+    //     imageUrl = process.env.BASE_URL + uploadedFile;
+    // }
+    // catch (err) { response.status(501).send(err.message) }
 
-    let uploadedFile = request.file.filename;
-    uploadedFile = 'uploads/' + uploadedFile;
-    let imageUrl = process.env.BASE_URL + uploadedFile;
     //console.log(process.env.BASE_URL);
-    console.log(imageUrl);
+    //console.log(imageUrl);
     if (!name || !slug || !city || !state) {
         return response.status(400).send('Input required!');
     }
-    //creating document/Ads for entered details
+
+    //Capitalize city name
+    let cityName = city[0].toUpperCase() + city.slice(1);
+
     const newPlace = new PlaceModel({
         name,
         slug,
-        city,
+        city: cityName,
         state,
         imageUrl,
     });
@@ -52,9 +59,7 @@ router.post('/new', upload.single('image'), async (request, response) => {
     try {
         //saving the doc/Place to database collection
         const savePlace = await newPlace.save();
-
         response.status(201).send("Place created with ID: " + savePlace.id);
-
     } catch (e) {
         response.status(501).send(e.message)
     }
@@ -62,7 +67,7 @@ router.post('/new', upload.single('image'), async (request, response) => {
 
 
 //SHOW ONE PLACE
-router.delete('/find/:slug', async (request, response) => {
+router.get('/find/:slug', async (request, response) => {
     //console.log(request.params.id);
     try {
         const place = await PlaceModel.find({ slug: request.params.slug });
@@ -73,10 +78,12 @@ router.delete('/find/:slug', async (request, response) => {
 });
 
 //SHOW  PLACEs in A CITY
-router.delete('/city/:city', async (request, response) => {
+router.get('/city/:city', async (request, response) => {
     //console.log(request.params.id);
     try {
-        const places = await PlaceModel.find({ city: request.params.city });
+        let cityName = request.params.city;
+        cityName = cityName[0].toUpperCase() + cityName.slice(1);
+        const places = await PlaceModel.find({ city: cityName });
         response.status(200).json(places);
     } catch (e) {
         response.status(501).send(e.message)
