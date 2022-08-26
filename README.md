@@ -11,9 +11,9 @@ This is a simple challenge to test your skills on building APIs.
 Create a simple API to manage places. This API should allow to:
 <br>
 - Create a place: POST/places/new
-- Get a specific place: GET/places/find/<place-name>
+- Get a specific place: GET/places/find/{place-name}
 - List all places: GET/places/all
-- Filter them by name or city: GET/places/city/<city-name>
+- Filter them by name or city: GET/places/city/{city-name}
 <br>
 <br>
 
