@@ -30,5 +30,4 @@ app.use(morgan("dev"));
 //Router related usage
 app.use('/places', placesRouter);
 
-
 app.listen(process.env.PORT || 8000)
