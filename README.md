@@ -11,10 +11,10 @@ This is a simple challenge to test your skills on building APIs.
 ## https://placesz.herokuapp.com/
 Create a simple API to manage places. This API should allow to:
 <br>
-- Create a place: POST/places/new
-- Get a specific place: GET/places/find/{place-name}
-- List all places: GET/places/all
-- Filter them by name or city: GET/places/city/{city-name}
+- Create a place: https://placesz.herokuapp.com//places/new
+- Get a specific place: https://placesz.herokuapp.com//places/find/{place-name}
+- List all places: https://placesz.herokuapp.com//places/all
+- Filter them by name or city: https://placesz.herokuapp.com//places/city/{city-name}
 <br>
 <br>
 
