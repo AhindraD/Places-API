@@ -32,7 +32,8 @@ A place must have the following fields:
 # Tech Stack
 - ExpressJS
 - MongoDB
-![fetch data](https://github.com/AhindraD/Places-API/blob/master/images/snaps.PNG?raw=true)
+ 
+ ![fetch data](https://github.com/AhindraD/Places-API/blob/master/images/snaps.PNG?raw=true)
 <br>
 <br>
 <br>
