@@ -1,5 +1,5 @@
 # Places - API
-![all request endpoints](https://github.com/AhindraD/Places-API/blob/master/images/snaps.PNG?raw=true)
+![add place structure](https://github.com/AhindraD/Places-API/blob/master/images/add-place.PNG?raw=true)
 <br>
 <br>
 <br>
@@ -32,7 +32,7 @@ A place must have the following fields:
 # Tech Stack
 - ExpressJS
 - MongoDB
-
+![fetch data](https://github.com/AhindraD/Places-API/blob/master/images/snaps.PNG?raw=true)
 <br>
 <br>
 <br>
