@@ -1,5 +1,5 @@
 # Places - API
-![all request endpoints]()
+![all request endpoints](https://github.com/AhindraD/Places-API/blob/master/images/snaps.PNG?raw=true)
 <br>
 <br>
 <br>
